@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="mydiv">
+        <table>
+            <tbody>
+                <tr>
+                    <td>#:</td>
+                    <td id="id"></td>
+                </tr>
+                <tr>
+                    <td>Coure ID:</td>
+                    <td id="courseId"></td>
+                </tr>
+                <tr>
+                    <td>Question:</td>
+                    <td id="question"></td>
+                </tr>
+                <tr>
+                    <td>A:</td>
+                    <td id="a"></td>
+                </tr>
+                <tr>
+                    <td>B:</td>
+                    <td id="b"></td>
+                </tr>
+                <tr>
+                    <td>C:</td>
+                    <td id="c"></td>
+                </tr>
+                <tr>
+                    <td>D:</td>
+                    <td id="d"></td>
+                </tr>
+                <tr>
+                    <td>Answer:</td>
+                    <td id="answer"></td>
+                </tr>
+                <tr>
+                    <td>Type:</td>
+                    <td id="type"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+    <script>
+        var para = new URLSearchParams(window.location.search);
+        var pass = JSON.parse(para.get("first"));
+        console.log(pass);
+        console.log(pass.question);
+
+        document.getElementById("id").innerHTML = pass.id;
+        document.getElementById("courseId").innerHTML = pass.courseId;
+        document.getElementById("question").innerHTML = pass.question;
+        document.getElementById("a").innerHTML = pass.a;
+        document.getElementById("b").innerHTML = pass.b;
+        document.getElementById("c").innerHTML = pass.c;
+        document.getElementById("d").innerHTML = pass.d;
+        document.getElementById("answer").innerHTML = pass.answer;
+        document.getElementById("type").innerHTML = pass.type;
+
+    </script>
+</body>
+</html>
